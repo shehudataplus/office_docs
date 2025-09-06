@@ -1,0 +1,19 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="55" fill="#2c5aa0" stroke="#1e3f73" stroke-width="2"/>
+  
+  <!-- Data symbol - stylized bars -->
+  <rect x="25" y="45" width="8" height="30" fill="white" rx="2"/>
+  <rect x="37" y="35" width="8" height="40" fill="white" rx="2"/>
+  <rect x="49" y="25" width="8" height="50" fill="white" rx="2"/>
+  <rect x="61" y="30" width="8" height="45" fill="white" rx="2"/>
+  <rect x="73" y="40" width="8" height="35" fill="white" rx="2"/>
+  <rect x="85" y="50" width="8" height="25" fill="white" rx="2"/>
+  
+  <!-- Plus symbol -->
+  <rect x="55" y="85" width="10" height="3" fill="#4a7bc8" rx="1"/>
+  <rect x="58.5" y="81.5" width="3" height="10" fill="#4a7bc8" rx="1"/>
+  
+  <!-- Text -->
+  <text x="60" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c5aa0">DATAPLUS</text>
+</svg>

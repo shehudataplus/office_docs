@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions - Multi-Links Associates</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/documents.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #123a8b;
+            --brand-red: #c3312e;
+            --text: #1f2937;
+            --muted: #6b7280;
+        }
+        .logo-container h1 {
+            color: var(--brand-blue) !important;
+        }
+        .tagline {
+            color: var(--brand-red);
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .instructions-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .instruction-section {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .instruction-section h2 {
+            color: var(--brand-blue);
+            border-bottom: 3px solid var(--brand-red);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .instruction-section h3 {
+            color: var(--brand-blue);
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .step-list {
+            counter-reset: step-counter;
+        }
+        .step-list li {
+            counter-increment: step-counter;
+            margin-bottom: 15px;
+            padding-left: 40px;
+            position: relative;
+        }
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--brand-blue);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--brand-red);
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .tip-box {
+            background: #e8f4fd;
+            border: 1px solid var(--brand-blue);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .tip-box h4 {
+            color: var(--brand-blue);
+            margin-top: 0;
+        }
+        .contact-info {
+            background: var(--brand-blue);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .contact-info h3 {
+            color: white;
+            margin-top: 0;
+        }
+        .btn-back {
+            background: var(--brand-blue);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .btn-back:hover {
+            background: #0f2d6b;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="assets/img/multilinks-logo.jpg" alt="Multi-Links Associates Logo">
+                <h1>MULTI-LINKS ASSOCIATES</h1>
+                <div class="tagline">Consulting Civil/Structural Engineers & Project Managers</div>
+            </div>
+            <nav>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="office-documents.html">Documents</a></li>
+                    <li><a href="instructions.html" class="active">Instructions</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="instructions-container">
+        <a href="office-documents.html" class="btn-back">
+            <i class="fas fa-arrow-left"></i> Back to Documents
+        </a>
+        
+        <div class="instruction-section">
+            <h2><i class="fas fa-book"></i> How to Create and Print Documents</h2>
+            <p>Welcome to the Multi-Links Associates Office Document System. This guide will help you create professional receipts, invoices, and letterheads, and export them as PDF files.</p>
+        </div>
+
+        <div class="instruction-section">
+            <h2><i class="fas fa-play-circle"></i> Getting Started</h2>
+            <ol class="step-list">
+                <li><strong>Access the System:</strong> Navigate to the Documents page from the main menu</li>
+                <li><strong>Login:</strong> Enter your credentials when prompted to access the document templates</li>
+                <li><strong>Select Document Type:</strong> Choose from Payment Receipt, Invoice, or Letterhead tabs</li>
+            </ol>
+        </div>
+
+        <div class="instruction-section">
+            <h2><i class="fas fa-receipt"></i> Creating a Payment Receipt</h2>
+            <ol class="step-list">
+                <li>Click on the <strong>"Payment Receipt"</strong> tab in the document selector</li>
+                <li>Fill in the receipt details:
+                    <ul>
+                        <li><strong>Receipt No:</strong> Enter a unique receipt number (e.g., RCP-001)</li>
+                        <li><strong>Date:</strong> Select the payment date</li>
+                        <li><strong>Customer Name:</strong> Enter the customer's full name</li>
+                        <li><strong>Customer Address:</strong> Add the customer's complete address</li>
+                        <li><strong>Amount Received:</strong> Input the payment amount</li>
+                        <li><strong>Payment Method:</strong> Choose from Cash, Cheque, or Bank Transfer</li>
+                    </ul>
+                </li>
+                <li>Review all information for accuracy</li>
+                <li>Click the <strong>"Print"</strong> button to generate the PDF</li>
+            </ol>
+        </div>
+
+        <div class="instruction-section">
+            <h2><i class="fas fa-file-invoice"></i> Creating an Invoice</h2>
+            <ol class="step-list">
+                <li>Click on the <strong>"Invoice"</strong> tab in the document selector</li>
+                <li>Complete the invoice information:
+                    <ul>
+                        <li><strong>Invoice Number:</strong> Enter a unique invoice ID (e.g., INV-001)</li>
+                        <li><strong>Invoice Date:</strong> Set the issue date</li>
+                        <li><strong>Due Date:</strong> Specify the payment deadline</li>
+                        <li><strong>Client Information:</strong> Fill in client name and billing address</li>
+                        <li><strong>Service/Product Details:</strong> Add line items with descriptions, quantities, and rates</li>
+                        <li><strong>Tax Information:</strong> Include applicable taxes if required</li>
+                    </ul>
+                </li>
+                <li>The system will automatically calculate subtotals and final amounts</li>
+                <li>Review the invoice for completeness and accuracy</li>
+                <li>Use the <strong>"Print"</strong> button to create the PDF</li>
+            </ol>
+        </div>
+
+        <div class="instruction-section">
+            <h2><i class="fas fa-file-alt"></i> Creating a Letterhead</h2>
+            <ol class="step-list">
+                <li>Click on the <strong>"Letterhead"</strong> tab in the document selector</li>
+                <li>Enter the letter information:
+                    <ul>
+                        <li><strong>Date:</strong> Set the letter date</li>
+                        <li><strong>Reference:</strong> Add a reference number if needed</li>
+                        <li><strong>Recipient:</strong> Enter the recipient's name and address</li>
+                        <li><strong>Subject:</strong> Specify the letter subject</li>
+                        <li><strong>Content:</strong> Write your letter in the text area (includes professional signature template)</li>
+                    </ul>
+                </li>
+                <li>Review the content for proper formatting and completeness</li>
+                <li>Click <strong>"Print"</strong> to generate the PDF</li>
+            </ol>
+        </div>
+
+        <div class="instruction-section">
+            <h2><i class="fas fa-print"></i> Printing to PDF</h2>
+            
+            <h3>Method 1: Browser Print Function</h3>
+            <ol class="step-list">
+                <li>Click the <strong>"Print"</strong> button on any document template</li>
+                <li>In the print dialog, select <strong>"Save as PDF"</strong> or <strong>"Microsoft Print to PDF"</strong></li>
+                <li>Choose your save location and filename</li>
+                <li>Click <strong>"Save"</strong></li>
+            </ol>
+
+            <h3>Method 2: Keyboard Shortcut</h3>
+            <ol class="step-list">
+                <li>After clicking print, use <strong>Ctrl+P</strong> (Windows) or <strong>Cmd+P</strong> (Mac)</li>
+                <li>Select <strong>"Save as PDF"</strong> from the destination dropdown</li>
+                <li>Adjust print settings if needed:
+                    <ul>
+                        <li><strong>Layout:</strong> Portrait (recommended)</li>
+                        <li><strong>Margins:</strong> Minimum or None for full-page documents</li>
+                        <li><strong>Scale:</strong> 100% for accurate sizing</li>
+                    </ul>
+                </li>
+                <li>Save the PDF to your desired location</li>
+            </ol>
+
+            <div class="highlight-box">
+                <strong>Important:</strong> Always preview your document before printing to ensure all information is correctly formatted and complete.
+            </div>
+        </div>
+
+        <div class="instruction-section">
+            <h2><i class="fas fa-lightbulb"></i> Tips for Best Results</h2>
+            
+            <div class="tip-box">
+                <h4><i class="fas fa-check-circle"></i> Document Preparation</h4>
+                <ul>
+                    <li><strong>Complete All Fields:</strong> Fill in all required information before printing</li>
+                    <li><strong>Use Clear Button:</strong> Click "Clear" to reset forms when starting new documents</li>
+                    <li><strong>Check Preview:</strong> Review the document layout before printing</li>
+                    <li><strong>Consistent Numbering:</strong> Use sequential numbering for receipts and invoices</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h4><i class="fas fa-palette"></i> Professional Formatting</h4>
+                <ul>
+                    <li>All templates automatically include Multi-Links Associates branding</li>
+                    <li>Contact information is pre-filled with company details</li>
+                    <li>Documents are optimized for standard A4 paper printing</li>
+                    <li>Professional color scheme maintains brand consistency</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="instruction-section">
+            <h2><i class="fas fa-cog"></i> Document Features</h2>
+            <ul>
+                <li><strong>Professional Branding:</strong> All documents include Multi-Links Associates logo and contact details</li>
+                <li><strong>Auto-formatting:</strong> Templates maintain consistent professional appearance</li>
+                <li><strong>Contact Information:</strong> Includes phone numbers, email, and full address</li>
+                <li><strong>Print-Ready:</strong> Optimized layouts for standard A4 paper printing</li>
+                <li><strong>Brand Colors:</strong> Uses official Multi-Links Associates color scheme</li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <h3><i class="fas fa-phone"></i> Need Help?</h3>
+            <p><strong>Phone:</strong> 0802 709 5625, 0817 709 5625</p>
+            <p><strong>Email:</strong> multilinksassociates@yahoo.com</p>
+            <p><strong>Address:</strong> No. 2, Ati Close, Block 2 Flat 2 (Agric Quarters), Off Constantine Street, Off Shinyanga Street, Opp. Government Secondary School, Wuse Zone 4, P.O. Box 9359 (Garki), Abuja — Nigeria</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/img/multilinks-logo.jpg" alt="Multi-Links Associates Logo">
+                    <h3>MULTI-LINKS ASSOCIATES</h3>
+                    <p>Consulting Civil/Structural Engineers & Project Managers</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="office-documents.html">Documents</a></li>
+                        <li><a href="instructions.html">Instructions</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> No. 2, Ati Close, Block 2 Flat 2, Wuse Zone 4, Abuja, Nigeria</p>
+                    <p><i class="fas fa-phone"></i> 0802 709 5625, 0817 709 5625</p>
+                    <p><i class="fas fa-envelope"></i> multilinksassociates@yahoo.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Multi-Links Associates. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

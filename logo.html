@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multi-Links Associates — Header</title>
+  <style>
+    :root{
+      --brand-blue:#123a8b; /* deep blue close to logo */
+      --brand-red:#c3312e;  /* red accent */
+      --text:#1f2937;       /* slate-800 */
+      --muted:#6b7280;      /* slate-500 */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;color:var(--text);}
+
+    /* HEADER */
+    .site-header{background:#fff;border-bottom:1px solid #e5e7eb;}
+    .header-inner{max-width:1100px;margin:0 auto;padding:16px 20px;display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:center}
+
+    .logo img{display:block;height:100px;width:90px;object-fit:contain}
+
+    .brand{display:flex;flex-direction:column;gap:6px}
+    .brand h1{margin:0;line-height:1.1;font-size:clamp(20px,2.2vw,28px);letter-spacing:.3px;color:var(--brand-blue);font-weight:800}
+    .brand .tagline{font-size:clamp(12px,1.4vw,14px);color:var(--brand-red);font-weight:600}
+
+    .contact{display:grid;gap:4px;font-size:14px}
+    .contact .label{font-weight:800;color:var(--brand-red)}
+    address{font-style:normal}
+
+    .inline-list{display:flex;flex-wrap:wrap;gap:10px}
+    .inline-list a{color:var(--brand-blue);text-decoration:none}
+    .inline-list a:hover{text-decoration:underline}
+
+    /* Make header compact on very small screens */
+    @media (max-width:480px){
+      .header-inner{grid-template-columns:56px 1fr;padding:12px 14px}
+      .logo img{height:48px}
+    }
+
+    /* Optional sticky top */
+    .sticky{position:sticky;top:0;z-index:40;backdrop-filter:saturate(180%) blur(4px);}
+  </style>
+</head>
+<body>
+  <!-- HEADER START -->
+  <header class="site-header sticky" role="banner">
+    <div class="header-inner">
+      <a class="logo" href="/" aria-label="Multi-Links Associates Home">
+        <!-- Replace src with your uploaded logo path -->
+        <img src="assets/img/multilinks-logo.jpg" alt="Multi-Links Associates logo" />
+      </a>
+
+      <div class="brand">
+        <h1>MULTI‑LINKS ASSOCIATES</h1>
+        <div class="tagline">Consulting Civil/Structural Engineers &amp; Project Managers</div>
+
+        <div class="contact">
+          <div class="label">OFFICE:</div>
+          <address>
+            No. 2, Ati Close, Block 2 Flat 2 (Agric Quarters), Off Constantine Street,<br />
+            Off Shinyanga Street, Opp. Government Secondary School, Wuse Zone 4,<br />
+            P.O. Box 9359 (Garki), Abuja — Nigeria
+          </address>
+
+          <div class="inline-list" aria-label="Contact">
+            <span>☎
+              <a href="tel:08027095625">0802&nbsp;709&nbsp;5625</a>,
+              <a href="tel:08177095625">0817&nbsp;709&nbsp;5625</a>
+            </span>
+            <span>•</span>
+            <span>
+              E‑mail: <a href="mailto:multilinksassociates@yahoo.com">multilinksassociates@yahoo.com</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <!-- Demo filler so you can see the sticky behavior; remove in production -->
+  <main style="padding:24px;max-width:1100px;margin:auto;color:var(--muted)">
+    <p>Page content…</p>
+  </main>
+
+  <!-- Notes:
+    1) Upload your logo and update the <img src> path.
+    2) To use external CSS (preferred for WordPress), move the <style> block
+       into /assets/css/header.css and add <link rel="stylesheet" href="/assets/css/header.css">.
+  -->
+</body>
+</html>

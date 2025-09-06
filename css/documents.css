@@ -1,0 +1,819 @@
+/* 
+   Office Documents Stylesheet
+   DATAPLUS Free Office DOCs - Document Templates
+*/
+
+/* ===== DOCUMENT STYLES ===== */
+.documents-hero {
+    background: linear-gradient(135deg, #2c5aa0 0%, #4a7bc8 100%);
+    color: white;
+    padding: 80px 0 60px;
+    text-align: center;
+}
+
+.documents-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.documents-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ===== DOCUMENT SELECTOR ===== */
+.document-selector {
+    background: white;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.selector-tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+    color: #2c5aa0;
+    background-color: #f8f9fa;
+}
+
+.tab-btn.active {
+    color: #2c5aa0;
+    border-bottom-color: #2c5aa0;
+    background-color: #f8f9fa;
+}
+
+/* ===== AUTHENTICATION STYLES ===== */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2c5aa0 0%, #4a7bc8 100%);
+    padding: 20px;
+}
+
+.auth-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-header {
+    margin-bottom: 30px;
+}
+
+.auth-header i {
+    font-size: 3rem;
+    color: #2c5aa0;
+    margin-bottom: 15px;
+}
+
+.auth-header h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.auth-header p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.auth-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #004d99;
+}
+
+.auth-form .btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.main-content {
+    display: none;
+}
+
+.main-content.authenticated {
+    display: block;
+}
+
+.hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.logout-btn:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hero-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logout-btn {
+        align-self: center;
+    }
+}
+
+/* ===== DOCUMENT TEMPLATES STYLES ===== */
+.document-template {
+    display: none;
+    padding: 40px 0;
+    min-height: 80vh;
+}
+
+.document-template.active {
+    display: block;
+}
+
+.document-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.document-header h2 {
+    font-size: 2rem;
+    color: #004d99;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.document-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.document-content {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+/* ===== COMPANY HEADER ===== */
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #004d99;
+}
+
+.company-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.company-info h1 {
+    font-size: 2.2rem;
+    color: #004d99;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.company-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ===== DOCUMENT TITLE ===== */
+.document-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.document-title h2 {
+    font-size: 2.5rem;
+    color: #004d99;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* ===== FORM STYLES ===== */
+.info-group {
+    margin-bottom: 20px;
+}
+
+.info-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.info-group input,
+.info-group select,
+.info-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.info-group input:focus,
+.info-group select:focus,
+.info-group textarea:focus {
+    outline: none;
+    border-color: #004d99;
+    box-shadow: 0 0 0 3px rgba(0, 77, 153, 0.1);
+}
+
+.info-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* ===== RECEIPT STYLES ===== */
+.receipt-details {
+    display: grid;
+    gap: 30px;
+}
+
+.receipt-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.customer-info h3 {
+    color: #004d99;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.payment-details {
+    display: block;
+}
+
+.payment-details .info-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.payment-details .info-group.full-width {
+    margin-bottom: 20px;
+}
+
+.signature-section {
+    margin-top: 50px;
+}
+
+.signature-box {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.signature-line {
+    width: 300px;
+    height: 2px;
+    background-color: #333;
+    margin: 40px auto 10px;
+}
+
+/* ===== INVOICE STYLES ===== */
+.invoice-details {
+    display: grid;
+    gap: 30px;
+}
+
+.invoice-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.client-info h3 {
+    color: #004d99;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.items-table th,
+.items-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.items-table th {
+    background-color: #004d99;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.items-table td input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 8px;
+    font-size: 0.95rem;
+}
+
+.items-table td input:focus {
+    background-color: #f8f9fa;
+    border-radius: 3px;
+}
+
+.item-amount {
+    font-weight: 600;
+    color: #004d99;
+}
+
+.btn-remove {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-remove:hover {
+    background: #c82333;
+}
+
+.add-item-btn {
+    margin-top: 15px;
+}
+
+.invoice-totals {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.totals-section {
+    min-width: 300px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.final-total {
+    border-top: 2px solid #004d99;
+    padding-top: 15px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #004d99;
+}
+
+.payment-terms h3 {
+    color: #004d99;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* ===== LETTERHEAD STYLES ===== */
+.letter-details {
+    display: grid;
+    gap: 25px;
+}
+
+.letter-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.recipient-info label,
+.letter-subject label,
+.letter-content label {
+    font-weight: 600;
+    color: #004d99;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.letter-content textarea {
+    min-height: 400px;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .documents-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .selector-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e9ecef;
+        border-right: none;
+    }
+    
+    .tab-btn.active {
+        border-bottom: 1px solid #e9ecef;
+        border-left: 3px solid #004d99;
+    }
+    
+    .document-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .document-content {
+        padding: 20px;
+    }
+    
+    .company-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .receipt-info,
+    .payment-details,
+    .invoice-header,
+    .letter-header {
+        grid-template-columns: 1fr;
+    }
+    
+    .items-table {
+        font-size: 0.85rem;
+    }
+    
+    .items-table th,
+    .items-table td {
+        padding: 10px 8px;
+    }
+    
+    .totals-section {
+        min-width: auto;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    @page {
+        size: A4;
+        margin: 0.5in;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 11px;
+        line-height: 1.3;
+        color: #000;
+        background: white;
+    }
+    
+    header,
+    footer,
+    .documents-hero,
+    .document-selector,
+    .document-header,
+    .document-actions {
+        display: none !important;
+    }
+    
+    .document-template {
+        display: block !important;
+        page-break-inside: avoid;
+        margin: 0;
+        padding: 10px;
+        box-shadow: none;
+        border: none;
+        height: auto;
+        max-height: none;
+    }
+    
+    .document-template:not(.active) {
+        display: none !important;
+    }
+    
+    .document-content {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .company-header {
+        border-bottom: 1pt solid #004d99;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    
+    .company-logo img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .company-info h1 {
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 3px;
+    }
+
+    .company-info p {
+        font-size: 9px;
+        margin: 1px 0;
+    }
+    
+    .document-title h2 {
+        font-size: 14px;
+        color: #000;
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .info-group {
+        margin-bottom: 5px;
+    }
+
+    .info-group label {
+        font-weight: bold;
+        margin-bottom: 1px;
+        font-size: 9px;
+        display: block;
+    }
+    
+    .info-group input,
+    .info-group select,
+    .info-group textarea {
+        border: none;
+        border-bottom: 1px solid #000;
+        background: transparent;
+        padding: 1px 0;
+        font-size: 10px;
+        width: 100%;
+        line-height: 1.2;
+    }
+    
+    .receipt-info,
+    .invoice-header,
+    .letter-header {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 8px;
+    }
+
+    .receipt-info > div,
+    .invoice-header > div,
+    .letter-header > div {
+        flex: 1;
+    }
+
+    .payment-details {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .payment-details .info-group {
+        margin-bottom: 6px;
+        width: 100%;
+    }
+    
+    .items-table {
+        border: 1px solid #000;
+        border-collapse: collapse;
+        font-size: 9px;
+        margin: 5px 0;
+    }
+    
+    .items-table th {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+        border: 1px solid #000;
+        padding: 2px;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+    
+    .items-table td {
+        border: 1px solid #000;
+        padding: 2px;
+        line-height: 1.1;
+    }
+    
+    .totals-section {
+        background: transparent !important;
+        border: 1px solid #000;
+        margin-top: 5px;
+        width: 40%;
+        margin-left: auto;
+        padding: 5px;
+    }
+
+    .total-row {
+        display: flex;
+        justify-content: space-between;
+        margin: 2px 0;
+        padding: 1px 0;
+        border-bottom: 1px solid #ccc;
+        font-size: 9px;
+    }
+
+    .final-total {
+        border-bottom: 2px solid #000;
+        font-weight: bold;
+    }
+    
+    .signature-section {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .signature-section div {
+        text-align: center;
+        font-size: 8px;
+    }
+    
+    .signature-line {
+        background-color: #000;
+        width: 120px;
+        margin: 10px 0 2px 0;
+        height: 1px;
+    }
+    
+    .btn,
+    .add-item-btn,
+    .btn-remove {
+        display: none !important;
+    }
+
+    .letter-content textarea {
+        min-height: 40px !important;
+        resize: none;
+        font-size: 10px;
+        line-height: 1.2;
+    }
+    
+    /* Letterhead specific styles */
+    .letterhead-content {
+        min-height: 200px;
+        margin: 8px 0;
+    }
+
+    .letterhead-content textarea {
+        min-height: 200px !important;
+        font-size: 10px;
+        line-height: 1.3;
+    }
+    
+    /* Compact spacing for single page */
+    .document-template h2 {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+    
+    .document-template h3 {
+        margin: 3px 0;
+        font-size: 12px;
+    }
+    
+    .document-template p {
+        margin: 2px 0;
+        font-size: 9px;
+    }
+
+    textarea {
+        min-height: 40px !important;
+        resize: none;
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    /* Additional compact styles */
+    .company-header {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+    .document-title {
+        margin: 5px 0;
+    }
+    
+    /* Page breaks */
+    .document-template {
+        page-break-before: always;
+    }
+    
+    .document-template:first-child {
+        page-break-before: auto;
+    }
+    
+    .signature-section,
+    .payment-terms {
+        page-break-inside: avoid;
+    }
+}

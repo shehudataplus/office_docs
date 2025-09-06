@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Documents - Multi-Links Associates</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/documents.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #123a8b; /* deep blue close to logo */
+            --brand-red: #c3312e;  /* red accent */
+            --text: #1f2937;       /* slate-800 */
+            --muted: #6b7280;      /* slate-500 */
+        }
+        .logo-container h1 {
+            color: var(--brand-blue) !important;
+        }
+        .tagline {
+            color: var(--brand-red);
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .company-info h1 {
+            color: var(--brand-blue) !important;
+        }
+        .footer-logo h3 {
+            color: var(--brand-blue) !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="assets/img/multilinks-logo.jpg" alt="Multi-Links Associates Logo">
+                <h1>MULTI-LINKS ASSOCIATES</h1>
+                <div class="tagline">Consulting Civil/Structural Engineers & Project Managers</div>
+            </div>
+            <nav>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Templates <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#receipt">Payment Receipts</a>
+                            <a href="#invoice">Invoices</a>
+                            <a href="#letterhead">Letterheads</a>
+                            <a href="#forms">Business Forms</a>
+                            <a href="#contracts">Contracts</a>
+                        </div>
+                    </li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="instructions.html">Instructions</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="office-documents.html" class="active">Documents</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Authentication Section -->
+    <div id="auth-container" class="auth-container">
+        <div class="auth-form">
+            <div class="auth-header">
+                <i class="fas fa-lock"></i>
+                <h2>Access Required</h2>
+                <p>Please enter your credentials to access office documents</p>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden until authenticated) -->
+    <div id="main-content" class="main-content" style="display: none;">
+    <section class="documents-hero">
+        <div class="container">
+            <div class="hero-header">
+                <div class="hero-content">
+                    <h1>Office Documents</h1>
+                    <p>Professional document templates for your business needs</p>
+                </div>
+                <button onclick="logout()" class="btn btn-secondary logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="document-selector">
+        <div class="container">
+            <div class="selector-tabs">
+                <button class="tab-btn active" data-tab="receipt">Payment Receipt</button>
+                <button class="tab-btn" data-tab="invoice">Invoice</button>
+                <button class="tab-btn" data-tab="letterhead">Letterhead</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Receipt Template -->
+    <section id="receipt-template" class="document-template active">
+        <div class="container">
+            <div class="document-header">
+                <h2><i class="fas fa-receipt"></i> Payment Receipt</h2>
+                <div class="document-actions">
+                    <button class="btn btn-secondary" onclick="clearForm('receipt')"><i class="fas fa-refresh"></i> Clear</button>
+                    <button class="btn btn-primary" onclick="printDocument('receipt')"><i class="fas fa-print"></i> Print</button>
+                </div>
+            </div>
+            
+            <div class="document-content" id="receipt-content">
+                <div class="company-header">
+                    <div class="company-logo">
+                        <img src="assets/img/multilinks-logo.jpg" alt="Multi-Links Associates Logo">
+                    </div>
+                    <div class="company-info">
+                        <h1>MULTI-LINKS ASSOCIATES</h1>
+                        <p>Consulting Civil/Structural Engineers & Project Managers</p>
+                        <p>Phone: 0802 709 5625, 0817 709 5625 | Email: multilinksassociates@yahoo.com</p>
+                        <p>No. 2, Ati Close, Block 2 Flat 2 (Agric Quarters), Off Constantine Street, Off Shinyanga Street, Opp. Government Secondary School, Wuse Zone 4, P.O. Box 9359 (Garki), Abuja — Nigeria</p>
+                    </div>
+                </div>
+                
+                <div class="document-title">
+                    <h2>PAYMENT RECEIPT</h2>
+                </div>
+                
+                <div class="receipt-details">
+                    <div class="receipt-info">
+                        <div class="info-group">
+                            <label>Receipt No:</label>
+                            <input type="text" id="receipt-number" placeholder="RCP-001">
+                        </div>
+                        <div class="info-group">
+                            <label>Date:</label>
+                            <input type="date" id="receipt-date">
+                        </div>
+                    </div>
+                    
+                    <div class="customer-info">
+                        <h3>Received From:</h3>
+                        <input type="text" id="customer-name" placeholder="Customer Name">
+                        <textarea id="customer-address" placeholder="Customer Address"></textarea>
+                    </div>
+                    
+                    <div class="payment-details">
+                        <div class="info-group">
+                            <label>Amount Received:</label>
+                            <input type="number" id="amount-received" placeholder="0.00" step="0.01">
+                        </div>
+                        <div class="info-group">
+                            <label>Payment Method:</label>
+                            <select id="payment-method">
+                                <option value="cash">Cash</option>
+                                <option value="cheque">Cheque</option>
+                                <option value="bank-transfer">Bank Transfer</option>
+                                <option value="card">Card Payment</option>
+                            </select>
+                        </div>
+                        <div class="info-group full-width">
+                            <label>Amount in Words:</label>
+                            <input type="text" id="amount-in-words" placeholder="Amount will appear here automatically" readonly>
+                        </div>
+                        <div class="info-group full-width">
+                            <label>Description/Purpose:</label>
+                            <textarea id="payment-description" placeholder="Payment for services/goods..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="signature-section">
+                        <div class="signature-box">
+                            <p>Received By:</p>
+                            <div class="signature-line"></div>
+                            <p>Signature & Date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invoice Template -->
+    <section id="invoice-template" class="document-template">
+        <div class="container">
+            <div class="document-header">
+                <h2><i class="fas fa-file-invoice"></i> Invoice</h2>
+                <div class="document-actions">
+                    <button class="btn btn-secondary" onclick="clearForm('invoice')"><i class="fas fa-refresh"></i> Clear</button>
+                    <button class="btn btn-primary" onclick="printDocument('invoice')"><i class="fas fa-print"></i> Print</button>
+                </div>
+            </div>
+            
+            <div class="document-content" id="invoice-content">
+                <div class="company-header">
+                    <div class="company-logo">
+                        <img src="assets/img/multilinks-logo.jpg" alt="Multi-Links Associates Logo">
+                    </div>
+                    <div class="company-info">
+                        <h1>MULTI-LINKS ASSOCIATES</h1>
+                        <p>Consulting Civil/Structural Engineers & Project Managers</p>
+                        <p>Phone: 0802 709 5625, 0817 709 5625 | Email: multilinksassociates@yahoo.com</p>
+                        <p>No. 2, Ati Close, Block 2 Flat 2 (Agric Quarters), Off Constantine Street, Off Shinyanga Street, Opp. Government Secondary School, Wuse Zone 4, P.O. Box 9359 (Garki), Abuja — Nigeria</p>
+                    </div>
+                </div>
+                
+                <div class="document-title">
+                    <h2>INVOICE</h2>
+                </div>
+                
+                <div class="invoice-details">
+                    <div class="invoice-header">
+                        <div class="invoice-info">
+                            <div class="info-group">
+                                <label>Invoice No:</label>
+                                <input type="text" id="invoice-number" placeholder="INV-001">
+                            </div>
+                            <div class="info-group">
+                                <label>Date:</label>
+                                <input type="date" id="invoice-date">
+                            </div>
+                            <div class="info-group">
+                                <label>Due Date:</label>
+                                <input type="date" id="due-date">
+                            </div>
+                        </div>
+                        
+                        <div class="client-info">
+                            <h3>Bill To:</h3>
+                            <input type="text" id="client-name" placeholder="Client Name">
+                            <textarea id="client-address" placeholder="Client Address"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-items">
+                        <table class="items-table">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Qty</th>
+                                    <th>Rate</th>
+                                    <th>Amount</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="invoice-items-body">
+                                <tr class="item-row">
+                                    <td><input type="text" class="item-description" placeholder="Item description"></td>
+                                    <td><input type="number" class="item-qty" value="1" min="1"></td>
+                                    <td><input type="number" class="item-rate" placeholder="0.00" step="0.01"></td>
+                                    <td class="item-amount">0.00</td>
+                                    <td><button class="btn-remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn btn-secondary add-item-btn" onclick="addInvoiceItem()"><i class="fas fa-plus"></i> Add Item</button>
+                    </div>
+                    
+                    <div class="invoice-totals">
+                        <div class="totals-section">
+                            <div class="total-row">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">₦0.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Tax (7.5%):</span>
+                                <span id="tax-amount">₦0.00</span>
+                            </div>
+                            <div class="total-row final-total">
+                                <span>Total:</span>
+                                <span id="total-amount">₦0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-terms">
+                        <h3>Payment Terms:</h3>
+                        <textarea id="payment-terms-text" placeholder="Payment terms and conditions...">Payment is due within 30 days of invoice date. Late payments may incur additional charges.</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Letterhead Template -->
+    <section id="letterhead-template" class="document-template">
+        <div class="container">
+            <div class="document-header">
+                <h2><i class="fas fa-file-alt"></i> Letterhead</h2>
+                <div class="document-actions">
+                    <button class="btn btn-secondary" onclick="clearForm('letterhead')"><i class="fas fa-refresh"></i> Clear</button>
+                    <button class="btn btn-primary" onclick="printDocument('letterhead')"><i class="fas fa-print"></i> Print</button>
+                </div>
+            </div>
+            
+            <div class="document-content" id="letterhead-content">
+                <div class="company-header">
+                    <div class="company-logo">
+                        <img src="assets/img/multilinks-logo.jpg" alt="Multi-Links Associates Logo">
+                    </div>
+                    <div class="company-info">
+                        <h1>MULTI-LINKS ASSOCIATES</h1>
+                        <p>Consulting Civil/Structural Engineers & Project Managers</p>
+                        <p>Phone: 0802 709 5625, 0817 709 5625 | Email: multilinksassociates@yahoo.com</p>
+                        <p>No. 2, Ati Close, Block 2 Flat 2 (Agric Quarters), Off Constantine Street, Off Shinyanga Street, Opp. Government Secondary School, Wuse Zone 4, P.O. Box 9359 (Garki), Abuja — Nigeria</p>
+                    </div>
+                </div>
+                
+                <div class="letter-details">
+                    <div class="letter-header">
+                        <div class="info-group">
+                            <label>Date:</label>
+                            <input type="date" id="letter-date">
+                        </div>
+                        <div class="info-group">
+                            <label>Reference:</label>
+                            <input type="text" id="letter-ref" placeholder="REF/001/2024">
+                        </div>
+                    </div>
+                    
+                    <div class="recipient-info">
+                        <label>To:</label>
+                        <textarea id="recipient-address" placeholder="Recipient Name\nRecipient Address\nCity, State"></textarea>
+                    </div>
+                    
+                    <div class="letter-subject">
+                        <label>Subject:</label>
+                        <input type="text" id="letter-subject" placeholder="Letter Subject">
+                    </div>
+                    
+                    <div class="letter-content">
+                        <label>Letter Content:</label>
+                        <textarea id="letter-body" placeholder="Dear Sir/Madam,\n\nWrite your letter content here...\n\nThank you for your attention.\n\nYours sincerely,\n\n\n[Your Name]\n[Your Title]\nMulti-Links Associates"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/img/multilinks-logo.jpg" alt="Multi-Links Associates Logo">
+                    <h3>MULTI-LINKS ASSOCIATES</h3>
+                    <p>Consulting Civil/Structural Engineers & Project Managers</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> No. 2, Ati Close, Block 2 Flat 2, Wuse Zone 4, Abuja, Nigeria</p>
+                    <p><i class="fas fa-phone"></i> 0802 709 5625, 0817 709 5625</p>
+                    <p><i class="fas fa-envelope"></i> multilinksassociates@yahoo.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Multi-Links Associates. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </div> <!-- End main-content -->
+    
+    <script src="js/main.js"></script>
+    <script src="js/documents.js"></script>
+</body>
+</html>
